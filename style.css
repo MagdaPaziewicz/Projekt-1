@@ -5,18 +5,22 @@
 :root {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
+
+/*.container_everything {
+    max-width: 960px;
+}*/
 
 .nav {
     background: darkslategray;
     position: fixed;
-    max-width: 1920px;
     margin: 0 auto;
     width: 100%;
     z-index: 2;
 }
 
-.nawigacja-wrapper {
+.nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,31 +30,28 @@
     font-size: 2rem;
 }
 
-.logo-link {
-    color: white;
-}
-
-.nawigacja-link:nth-child(1) {
-    margin: 50px;
-}
-
-.nawigacja-link:nth-child(2) {
-    margin-right: 50px;
-}
-
-.nawigacja-link:last-child {
-    cursor: not-allowed;
-}
-
-.nawigacja-link {
-    color: white;
-    letter-spacing: 1px;
-}
-
 a {
     color: white;
     text-decoration: none;
 }
+
+.nav-links-clik {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.nav-links-clik:nth-child(1) {
+    margin: 50px;
+}
+
+.nav-links-clik:nth-child(2) {
+    margin-right: 50px;
+}
+
+.nav-links-clik:last-child {
+    cursor: not-allowed;
+}
+
 .header {
     position: relative;
     height: 100vh;
@@ -62,7 +63,7 @@ a {
     z-index: 1;
 }
 
-.cień {
+.shadow {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -102,7 +103,7 @@ a {
     letter-spacing: 1px;
 }
 
-.header_link_oferta {
+.header_link_offer {
     width: 200px;
     padding: 10px 40px;
     border: 3px solid white;
@@ -110,10 +111,11 @@ a {
     font-size: 3rem;
     color: white;
     letter-spacing: 2px;
-    transition: color background 1s;
+    transition-property: all;
+    transition-duration: 1s;
 }
 
-.header_link_oferta:hover {
+.header_link_offer:hover {
     color: black;
     background: white;
 }
@@ -179,6 +181,7 @@ a {
 .oferta {
     max-width: 1920px;
     margin: 0 auto;
+    padding: 40px 0;
     height: 93vh;
     background-color: #405d78;
     color: white;
