@@ -8,9 +8,10 @@
     scroll-behavior: smooth;
 }
 
-/*.container_everything {
-    max-width: 960px;
-}*/
+.container_everything {
+    width: 960px;
+    margin: 0 auto;
+}
 
 .nav {
     background: darkslategray;
@@ -76,21 +77,12 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    max-width: 960px;
-    margin:  0 auto;
+    height: 100vh; /*max-width*/
+    /*line-height: 1.5;*/
+     
 }
 
 .glowny_tekst {
-    margin: 0;
-    padding: 0;
-    font-size: 3.6rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-}
-
-.glowny_tekst1 {
-    margin: 10px 0;
     padding: 0;
     font-size: 3.6rem;
     font-weight: 500;
@@ -121,7 +113,6 @@ a {
 }
 
 .o_nas {
-    max-width: 960px;
     width: 100%;
     padding: 40px 0;
     margin-left: auto;
@@ -142,20 +133,16 @@ a {
     margin-bottom: 40px;
 }
 
-.box:nth-child(1) .zdjęcie {
-    background-image: url(https://cdn.pixabay.com/photo/2015/03/03/18/58/woman-657753_960_720.jpg);
-}
+
 
 .zdjęcie {
     width: 20%;
+    max-width: 500px;
     aspect-ratio: 1/1;
     background-size: cover;
     background-position: center center;
     border-radius: 50%;
-}
-
-.o_ludziach {
-    width: 75%;
+    margin: 20px;
 }
 
 .nazwisko {
@@ -170,11 +157,15 @@ a {
 }
 
 .box:nth-child(2) .zdjęcie {
-    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_960_720.jpg);
+    text-align: right;
     order: 2;
 }
 
-.box:nth-child(2) .o_ludziach {
+.box:nth-of-type(even) .o_ludziach1 {
+    text-align: left;
+}
+
+.box:nth-of-type(odd) .o_ludziach2 {
     text-align: right;
 }
 
@@ -222,7 +213,7 @@ a {
     aspect-ratio: 1/1;
     margin: 35px;
     background-color: white;
-    transition-duration: 0,5s
+    transition-duration: 0.5s
 }
 
 .kwadrat:hover {
@@ -259,7 +250,6 @@ a {
     margin: 0 auto;
     background-color: darkslategray;
     color: white;
-    padding: 0 10px;
 }
 
 .footer_wrapper {
