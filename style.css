@@ -80,14 +80,14 @@ a {
     line-height: 1.5;
 }
 
-.glowny_tekst {
+.title_header {
     padding: 0;
     font-size: 3.6rem;
     font-weight: 500;
     letter-spacing: 2px;
 }
 
-.podtekst {
+.text_header {
     margin: 50px 0;
     font-size: 2rem;
     letter-spacing: 1px;
@@ -110,14 +110,21 @@ a {
     background: white;
 }
 
-.o_nas {
-    width: 100%;
+/* O NAS */
+
+.about_us {
     padding: 40px 0;
     margin-left: auto;
     margin-right: auto;
 }
 
-.specjalisci_wrapper {
+.title_about_us {
+    margin-left: 20px;
+    font-size: 4rem;
+    text-align: left;
+}
+
+.specialists_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -128,50 +135,62 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse;
+    margin-bottom: 40px;
 }
 
-.container_photo {
-    margin: 20px;
-    padding: 0;
-}
 
 .photo {
-    width: 100%;
     max-width: 500px;
-    height: 100%;
+    width: 20%;
     aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: top;
     border-radius: 50%;
 }
 
-.nazwisko {
+
+.box:nth-child(1) .photo {
+    background-image: url(https://cdn.pixabay.com/photo/2015/03/03/18/58/woman-657753_960_720.jpg);
+}
+
+.box:nth-of-type(odd) .photo {
+    text-align: left;
+}
+
+.box:nth-child(2) .photo {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_960_720.jpg);
+}
+
+
+.box:nth-of-type(even) .photo {
+    text-align: right;
+    order: 2;
+}
+
+
+.about_people {
+    width: 75%;
+}
+
+.surname {
     font-size: 2rem;
     font-weight: 700;
 }
 
-.opis {
+.description {
     margin-top: 30px;
     font-size: 1.6rem;
     line-height: 2rem;
+
 }
 
-.box:nth-of-type(odd) .container_photo {
-    text-align: left;
-}
-
-.box:nth-of-type(even) .container_photo {
+.box:nth-child(2) .about_people {
     text-align: right;
 }
 
-.box:nth-of-type(odd) .o_ludziach {
-    text-align: left;
-}
+/*OFERTA*/
 
-.box:nth-of-type(even) .o_ludziach {
-    text-align: right;
-}
-
-.oferta {
+.offer {
     max-width: 1920px;
     margin: 0 auto;
     padding: 40px 0;
@@ -180,7 +199,7 @@ a {
     color: white;
 }
 
-.tytul {
+.title_offer {
     height: 20%;
     padding: 20px 0;
     display: flex;
@@ -189,7 +208,7 @@ a {
     font-size: 3.6rem;
 }
 
-.oferta_wrapper {
+.offer_wrapper {
     max-width: 1920px;
     margin: 0 auto;
     height: 80%;
@@ -198,14 +217,14 @@ a {
     align-items: center;
 }
 
-.oferta_container {
+.offer_container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
 }
 
-.kwadrat {
+.square {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,16 +235,16 @@ a {
     transition-duration: 0.5s
 }
 
-.kwadrat:hover {
+.square:hover {
     transform: scale(1.05);
 }
 
-.kwadrat:first-child {
+.square:first-child {
     position: relative;
     text-align: center;
 }
 
-.kwadrat:first-child .kółko {
+.square:first-child .dot {
     position: absolute;
     top: -10px;
     left: -10px;
@@ -235,7 +254,7 @@ a {
     border-radius: 50%;
 }
 
-.usługa1 {
+.service {
     font-size: 2.4rem;
     color: black;
 }
@@ -262,7 +281,7 @@ a {
     margin: 0 auto;
 }
 
-.stopka {
+.footer_text {
     font-size: 2rem;
 }
 .social_media {
